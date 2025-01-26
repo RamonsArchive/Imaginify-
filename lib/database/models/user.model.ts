@@ -8,7 +8,7 @@ export interface IUser {
     email: string;
     firstName: string;
     lastName: string;
-    photo: URL;
+    photo: String;
     planId: string;
     creditBalance: number;
   }
@@ -18,7 +18,7 @@ const UserSchema = new Schema({
     email: {type: String, required: true, unique: true},
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
-    photo: {type: URL, required: true},
+    photo: {type: String, required: true},
     planId: {type: String, required: true},
     creditBalance: {type: Number, required: true},
 })
