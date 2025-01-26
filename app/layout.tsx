@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { ClerkProvider, RedirectToSignIn, SignedOut } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const plexSans = localFont({
   src: [
@@ -68,7 +68,3 @@ export default function RootLayout({
     </ClerkProvider>
   );
 }
-
-/* <SignedOut>
-          <RedirectToSignIn />
-        </SignedOut> */
