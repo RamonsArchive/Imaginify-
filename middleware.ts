@@ -1,10 +1,6 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
 
-export default clerkMiddleware({
-  
-    publicRoutes: ['/api/webhooks/clerk'],
-  
-});
+export default clerkMiddleware();
 console.log('This is the middleware config');
 
 

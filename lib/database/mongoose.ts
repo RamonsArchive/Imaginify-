@@ -16,6 +16,7 @@ if (!cached) {
 }
 
 export const connectToDataBase = async () => {
+    console.log(`Connecting to database ${cached.conn}`);
     if (cached.conn) {
         return cached.conn;
     }
@@ -24,7 +25,7 @@ export const connectToDataBase = async () => {
     }
 
     cached.promise = cached.promise || 
-    mongoose.connect(MONGODB_URL, { dbName: 'ImageDom', bufferCommands: false});
+    mongoose.connect(MONGODB_URL, { dbName: 'imaginify', bufferCommands: false});
     cached.conn  = await cached.promise;
     return cached.conn;
 }
