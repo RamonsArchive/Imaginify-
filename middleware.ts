@@ -7,8 +7,8 @@ console.log('This is the middleware config');
 export const config = {
   matcher: [
    // '/', TRYING TO NOT PROTECT THESE WEEBHOOKS COMMENTED
-    //'/api/webhooks(.*)', // todo link this proplery. Public
-    //'/api/webhooks/stripe', // Public
+    '/api/webhooks(.*)', // todo link this proplery. Public
+    '/api/webhooks/stripe', // Public
 
     // Skip Next.js internals and all static files, unless found in search params
     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
