@@ -10,6 +10,7 @@ import { createUser, deleteUser, updateUser } from "@/lib/actions/actions";
 export async function POST(req: Request) {
   // You can find this in the Clerk Dashboard -> Webhooks -> choose the webhook
   const WEBHOOK_SECRET = process.env.WEBHOOK_SECRET;
+  console.log(`Webhook is being called ${WEBHOOK_SECRET}`);
 
   if (!WEBHOOK_SECRET) {
     throw new Error(
